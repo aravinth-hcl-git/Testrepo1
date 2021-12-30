@@ -11,10 +11,9 @@ pool:
 
 steps:
 
-- task: ArchiveFiles@2
+- 
+- task: CopyFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+    SourceFolder: 'https://github.com/aravinth-hcl-git/Testrepo1/blob/main/'
+    Contents: '**'
+    TargetFolder: 'https://aravinths0462@dev.azure.com/aravinths0462/aravinth-proj-test1/_git/aravinth-proj-test1'
